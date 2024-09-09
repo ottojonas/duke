@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duke | Checkout Light</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="checkout">
+        <h1>Checkout</h1>
+        <div class="frame">
+          <div class="item">
+            <img
+              id="album-cover"
+              src="https://via.placeholder.com/50"
+              alt="Album Cover" />
+            <div class="item-details">
+              <div class="song-title">
+                <p id="song-name">Placeholder Title</p>
+              </div>
+              <p id="artist">Placeholder Artist</p>
+            </div>
+          </div>
+        </div>
+        <div class="frame">
+          <div class="details">
+            <div class="detail">
+              <span>Place in Queue</span>
+              <span id="queue-position">Null</span>
+            </div>
+            <div class="detail total">
+              <span>Total amount</span>
+              <span>£0</span>
+            </div>
+          </div>
+        </div>
+        <div class="frame">
+          <div class="payment">
+            <span>Debit or credit card</span>
+            <a href="/src/pages/cardDetails/index.html">
+              <button class="add-payment">Add</button></a
+            >
+          </div>
+          <span class="payment-info">Apple/Google Pay available</span>
+        </div>
+        <a href="https://pay.sumup.com/b2c/Q1IC8IZS"
+          ><button class="pay-btn">Pay</button></a
+        >
+      </div>
+    </div>
+
+    <script src="anime.js"></script>
+  </body>
+</html>

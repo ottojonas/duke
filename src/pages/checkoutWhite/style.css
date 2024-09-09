@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+body {
+  font-family: Plus Jakarta Sans;
+  font-size: 13px;
+  background-color: #f9f9f9;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+}
+
+.checkout {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.frame {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 2px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 5px;
+}
+
+.item img {
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+}
+
+.item-details {
+  margin-left: 10px;
+}
+
+.song-title {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.artist {
+  color: #888;
+  font-size: 13px;
+  margin: 0;
+}
+
+.details {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.payment {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-payment {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-payment:hover {
+  background-color: #0056b3;
+}
+
+.payment-info {
+  color: #888;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.pay-btn {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.pay-btn:hover {
+  background-color: #0056b3;
+}

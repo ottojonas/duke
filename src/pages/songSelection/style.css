@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+
+* {
+  font-family: Raleway, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #181818;
+  color: white;
+}
+
+h4 {
+  font-size: 16px;
+  color: white;
+}
+
+input {
+  display: block;
+  outline: none;
+  border: none;
+  background: #282828;
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#centered__rectangle {
+  width: 400px;
+  background-color: #000;
+  margin: 40px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#top__row {
+  background-color: #121212;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#cancel__selection {
+  background: none;
+  border: none;
+  color: #ff3b30;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#search__input__box {
+  padding: 10px 20px;
+  background-color: #121212;
+}
+
+#song__list__container {
+  padding: 10px 20px;
+}
+
+#no__anthem,
+#popular__songs h4 {
+  padding: 10px 0;
+  border-bottom: 1px solid #282828;
+}
+
+#song__list {
+  margin-top: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+}
+
+#song__list::-webkit-scrollbar {
+  display: none;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #282828;
+  cursor: pointer;
+}
+
+.song img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.artist {
+  margin: 0;
+  font-size: 14px;
+  color: #b3b3b3;
+}

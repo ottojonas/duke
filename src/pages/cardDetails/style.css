@@ -1,0 +1,179 @@
+:root {
+  --black: #030102;
+  --grey: #9ea8bd;
+  --grey2: #e2e6ee;
+  --primary: #ca097a;
+  --white: #ffffff;
+  --heading1: 700 1.25rem / normal Roboto;
+  --text1regular: 400 1rem / normal Roboto;
+  --text2regular: 300 0.75rem / normal Roboto;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+body {
+  font: var(--text1regular);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  height: 597px;
+  width: 360px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.card__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font: var(--heading1);
+  color: var(--black);
+}
+
+p {
+  font: var(--text2regular);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row-group {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.row-group .form-group,
+.row-group .icon-group {
+  max-width: 144px;
+}
+
+.icon-group input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.form-group input {
+  padding-left: 12px;
+}
+
+.form-group input,
+form button,
+.icon-group {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.form-group input,
+.icon-group {
+  border: 1px solid var(--grey2);
+}
+
+.form-group input,
+.icon-group input {
+  color: var(--black);
+  font: var(--text1regular);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.icon-group input:focus {
+  outline: none;
+}
+
+.form-group input::placeholder,
+.icon-group input::placeholder {
+  color: var(--grey);
+  font: var(--text1regular);
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 12px;
+  margin-top: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+.icon-group input {
+  box-sizing: border-box;
+  padding-left: 12px !important;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+form button {
+  font: var(--text1regular);
+  border: none;
+  background-color: black;
+  color: var(--white);
+}
+
+form button.disabled {
+  background-color: black;
+  opacity: 0.3;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+label {
+  font: var(--text1regular);
+}
+
+.verify-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+small {
+  font: var(--text2regular);
+}
+
+.empty {
+  background-color: var(--grey2);
+  border-color: var(--grey2);
+}
+
+.filling {
+  background-color: var(--white);
+  border-color: var(--grey2);
+  box-shadow: 0px 4px 18px rgba(158, 168, 189, 0.31);
+}

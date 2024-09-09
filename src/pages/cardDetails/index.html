@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Card Details</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card__header">
+        <img
+          src="/src/assets/images/DUKE/fulllogo_transparent_nobuffer300x158.png"
+          class="logo"
+          alt="Duke logo" />
+        <h1>Payment information</h1>
+      </div>
+      <form action="">
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input
+            class="full-name empty"
+            type="text"
+            id="full-name"
+            aria-label="Full Name"
+            placeholder="Your Name"
+            required />
+        </div>
+
+        <div class="icon-group-container">
+          <label for="card-number">Card Number</label>
+          <div class="icon-group empty">
+            <input
+              type="text"
+              id="card-number"
+              aria-label="Card Number"
+              class="empty"
+              placeholder="1234 1234 1234 1234"
+              required />
+            <img
+              id="card-icon"
+              src="/src/assets/icons/credit-card.png"
+              alt="Card Icon"
+              height="14"
+              width="14" />
+          </div>
+        </div>
+
+        <div class="row-group">
+          <div class="form-group">
+            <label for="expiration">Expiration Date</label>
+            <input
+              class="expiration-input empty"
+              type="tel"
+              id="expiration"
+              minlength="5"
+              maxlength="5"
+              pattern="/{5}/"
+              placeholder="MM/YY"
+              required />
+          </div>
+          <div class="icon-group-container">
+            <label for="cvv">CVV</label>
+            <div class="icon-group empty">
+              <input
+                class="cvv-input empty"
+                type="tel"
+                maxlength="3"
+                placeholder="···"
+                id="cvv"
+                required />
+              <img
+                id="info-icon"
+                src="/src/assets/icons/info.png"
+                alt="Info Icon"
+                height="14"
+                width="14" />
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="disabled" disabled>Confirm payment</button>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+    <script src="anime.js" defer></script>
+  </body>
+</html>
