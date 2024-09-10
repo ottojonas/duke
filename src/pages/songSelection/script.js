@@ -1,5 +1,7 @@
-const clientID = "d4dbf4ba983749c69428b3aec1b434c3";
-const clientSecret = "9e66393aba6c4978aa82e7f8b801e99f";
+require("dotenv").config();
+
+const clientID = process.env.CLIENT_ID;
+const clientSecret = process.env.CLIENT_SECRET;
 
 const encodedCredentials = btoa(`${clientID}:${clientSecret}`);
 
