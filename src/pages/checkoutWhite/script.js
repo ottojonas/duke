@@ -25,7 +25,7 @@ async function refreshAccessToken(refreshToken) {
     if (!response.ok) {
       const errorBody = await response.text();
       throw new Error(
-        `HTTP error, status: ${response.status}, Body: ${errorBody}`
+        `HTTP error, status: ${response.status}, Body: ${errorBody}`,
       );
     }
     const data = await response.json();
@@ -44,7 +44,7 @@ function updateCheckoutPage(
   artist,
   trackId,
   accessToken,
-  refreshToken
+  refreshToken,
 ) {
   let songTitleElement = document.getElementById("song-name");
   let artistElement = document.getElementById("artist");
@@ -83,7 +83,7 @@ function updateCheckoutPage(
             artist,
             trackId,
             accessToken,
-            refreshToken
+            refreshToken,
           );
         } else {
           throw new Error("HTTP error " + response.status);
@@ -110,7 +110,7 @@ async function fetchAlbumCover(albumId, accessToken) {
       `https://api.spotify.com/v1/albums/${albumId}`,
       {
         headers: { Authorization: `Bearer ${accessToken}` },
-      }
+      },
     );
     if (!response.ok) {
       throw new Error(`HTTP error, status: ${response.status}`);
@@ -137,7 +137,7 @@ async function fetchCurrentPlaybackInfo(accessToken) {
 
 async function calculateTimeUntilSelectedSong(
   accessToken,
-  selectedSongQueuePosition
+  selectedSongQueuePosition,
 ) {
   try {
     const playbackInfo = await fetchCurrentPlaybackInfo(accessToken);
@@ -160,7 +160,7 @@ async function calculateTimeUntilSelectedSong(
     console.log(
       `time until selected song: ${
         totalDurationUntilSelectedSongMs / 1000 / 60
-      } minutes`
+      } minutes`,
     );
   } catch (error) {
     console.error(error);
