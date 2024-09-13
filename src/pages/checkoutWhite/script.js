@@ -215,6 +215,19 @@ window.onload = function () {
     console.error("artist element could not be found");
   }
 
+  if (!artistElement) {
+    console.error("artist element could not be found");
+    setTimeout(function () {
+      var artistElementRetry = document.getElementById("artist");
+      if (artistElementRetry) {
+        artistElement.textContent = artist;
+      } else {
+        console.error("artist element could not be found after delay");
+      }
+    }, 1000);
+    return;
+  }
+
   if (albumCoverElement) {
     albumCoverElement.textContent = albumCover;
   } else {
