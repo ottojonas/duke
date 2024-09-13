@@ -1,5 +1,5 @@
-const clientID = process.env.CLIENT_ID;
-const clientSecret = process.env.CLIENT_SECRET;
+const clientID = "d4dbf4ba983749c69428b3aec1b434c3";
+const clientSecret = "9e66393aba6c4978aa82e7f8b801e99f";
 
 const accessToken = "PLACEHOLDER_ACCESS_TOKEN";
 
@@ -23,7 +23,7 @@ async function refreshAccessToken(refreshToken) {
     if (!response.ok) {
       const errorBody = await response.text();
       throw new Error(
-        `HTTP error, status: ${response.status}, Body: ${errorBody}`,
+        `HTTP error, status: ${response.status}, Body: ${errorBody}`
       );
     }
     const data = await response.json();
@@ -42,7 +42,7 @@ function updateCheckoutPage(
   artist,
   trackId,
   accessToken,
-  refreshToken,
+  refreshToken
 ) {
   let songTitleElement = document.getElementById("song-name");
   let artistElement = document.getElementById("artist");
@@ -81,7 +81,7 @@ function updateCheckoutPage(
             artist,
             trackId,
             accessToken,
-            refreshToken,
+            refreshToken
           );
         } else {
           throw new Error("HTTP error " + response.status);
@@ -108,7 +108,7 @@ async function fetchAlbumCover(albumId, accessToken) {
       `https://api.spotify.com/v1/albums/${albumId}`,
       {
         headers: { Authorization: `Bearer ${accessToken}` },
-      },
+      }
     );
     if (!response.ok) {
       throw new Error(`HTTP error, status: ${response.status}`);
@@ -135,7 +135,7 @@ async function fetchCurrentPlaybackInfo(accessToken) {
 
 async function calculateTimeUntilSelectedSong(
   accessToken,
-  selectedSongQueuePosition,
+  selectedSongQueuePosition
 ) {
   try {
     const playbackInfo = await fetchCurrentPlaybackInfo(accessToken);
@@ -158,7 +158,7 @@ async function calculateTimeUntilSelectedSong(
     console.log(
       `time until selected song: ${
         totalDurationUntilSelectedSongMs / 1000 / 60
-      } minutes`,
+      } minutes`
     );
   } catch (error) {
     console.error(error);

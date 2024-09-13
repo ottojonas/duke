@@ -1,5 +1,5 @@
-const clientID = process.env.CLIENT_ID;
-const clientSecret = process.env.CLIENT_SECRET;
+const clientID = "d4dbf4ba983749c69428b3aec1b434c3";
+const clientSecret = "9e66393aba6c4978aa82e7f8b801e99f";
 
 const encodedCredentials = btoa(`${clientID}:${clientSecret}`);
 
@@ -64,7 +64,7 @@ function fetchTopTracks() {
     .then((data) => {
       displayTracks(
         data.items.map((item) => item.track),
-        "song__list",
+        "song__list"
       );
     })
     .catch((error) => console.error("Error:", error));
@@ -158,7 +158,7 @@ function displayTracks(tracks, containerId) {
 
       const title = encodeURIComponent(track.name);
       const artist = encodeURIComponent(
-        track.artists.map((artist) => artist.name).join(", "),
+        track.artists.map((artist) => artist.name).join(", ")
       );
       const cover = encodeURIComponent(track.album.images[0]?.url || "");
 
@@ -185,7 +185,7 @@ function queueSong(trackId, songTitle, artist) {
         "Content-Type": "application/json",
         Authorization: "Bearer " + accessToken,
       },
-    },
+    }
   )
     .then((response) => {
       if (!response.ok) {
@@ -218,10 +218,10 @@ function queueSong(trackId, songTitle, artist) {
 function authenticateWithSpotify() {
   let clientId = "d4dbf4ba983749c69428b3aec1b434c3";
   let redirectUri = encodeURIComponent(
-    "http://127.0.0.1:5500/src/pages/songSelection/index.html",
+    "http://127.0.0.1:5500/src/pages/songSelection/index.html"
   );
   let scopes = encodeURIComponent(
-    "user-read-private user-read-email user-modify-playback-state",
+    "user-read-private user-read-email user-modify-playback-state"
   );
 
   window.location.href = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&scope=${scopes}`;
@@ -237,7 +237,7 @@ window.onload = () => {
     body.append("code", code);
     body.append(
       "redirect_uri",
-      "http://127.0.0.1:5500/src/pages/songSelection/index.html",
+      "http://127.0.0.1:5500/src/pages/songSelection/index.html"
     );
 
     fetch("https://accounts.spotify.com/api/token", {
