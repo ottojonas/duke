@@ -2,7 +2,7 @@ const form = document.querySelector("form");
 const inputs = document.querySelectorAll("input");
 const submitButton = document.querySelector("button[type='submit']");
 const iconInputsContainer = document.querySelectorAll(
-  "div.icon-group-container"
+  "div.icon-group-container",
 );
 const cardNumberInput = document.querySelector("#card-number");
 const expirationDateInput = document.querySelector("#expiration");
