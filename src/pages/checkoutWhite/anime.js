@@ -1,7 +1,5 @@
-require("dotenv").config();
-
-const clientID = process.env.CLIENT_ID;
-const clientSecret = process.env.CLIENT_SECRET;
+const clientID = "d4dbf4ba983749c69428b3aec1b434c3";
+const clientSecret = "9e66393aba6c4978aa82e7f8b801e99f";
 
 async function refreshAccessToken(refreshToken) {
   if (!refreshToken) {
@@ -26,7 +24,7 @@ async function refreshAccessToken(refreshToken) {
     if (!response.ok) {
       const errorBody = await response.text();
       throw new Error(
-        `HTTP error, status: ${response.status}, Body: ${errorBody}`,
+        `HTTP error, status: ${response.status}, Body: ${errorBody}`
       );
     }
 
@@ -49,7 +47,7 @@ async function fetchAlbumCover(albumId, accessToken) {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
-      },
+      }
     );
     if (!response.ok) {
       throw new Error(`HTTP error, status: ${response.status}`);
@@ -67,7 +65,7 @@ function updateCheckoutPage(
   artist,
   trackId,
   accessToken,
-  refreshToken,
+  refreshToken
 ) {
   let songTitleElement = document.getElementById("song-name");
   let artistElement = document.getElementById("artist");
@@ -107,7 +105,7 @@ function updateCheckoutPage(
             artist,
             trackId,
             accessToken,
-            refreshToken,
+            refreshToken
           );
         } else {
           throw new Error("HTTP error " + response.status);
@@ -150,7 +148,7 @@ window.onload = function () {
   var songNameElement = document.getElementById("song-name");
   if (!songNameElement) {
     console.error(
-      "Element with ID 'song-name' not found. Delaying the update.",
+      "Element with ID 'song-name' not found. Delaying the update."
     );
     setTimeout(function () {
       var songNameElementRetry = document.getElementById("song-name");
@@ -158,7 +156,7 @@ window.onload = function () {
         songNameElementRetry.textContent = songTitle;
       } else {
         console.error(
-          "Element with ID 'song-name' still not found after delay.",
+          "Element with ID 'song-name' still not found after delay."
         );
       }
     }, 1000);
@@ -222,7 +220,7 @@ async function fetchCurrentPlaybackInfo(accessToken) {
 
 async function calculateTimeUntilSelectedSong(
   accessToken,
-  selectedSongPositionInQueue,
+  selectedSongPositionInQueue
 ) {
   try {
     const playbackInfo = await fetchCurrentPlaybackInfo(accessToken);
@@ -245,7 +243,7 @@ async function calculateTimeUntilSelectedSong(
     console.log(
       `Time until selected song: ${
         totalDurationUntilSelectedSongMs / 1000 / 60
-      } minutes`,
+      } minutes`
     );
   } catch (error) {
     console.error(error);
